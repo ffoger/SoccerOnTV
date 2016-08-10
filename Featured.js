@@ -44,7 +44,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    padding: 3
+    paddingTop:20
   },
   line2: {
     flex: 1,
@@ -52,15 +52,8 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    padding: 4
-  },
-  line3: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    padding: 4
+    padding:3,
+    paddingBottom:20
   },
   club: {
     fontWeight: 'bold',
@@ -89,7 +82,7 @@ class Featured extends Component {
       };
     }
     componentDidMount() {
-       Alert.alert("SoccerOnTV", "Your ultimate destination for finding the best matches on Canadian TV.");
+       Alert.alert("SoccerOnTV", "Your ultimate destination for finding the best on soccer (football) on Canadian TV!");
        this.getMatchesFromApiAsync();
     }
     getMatchesFromApiAsync() {
@@ -138,7 +131,7 @@ class Featured extends Component {
             <Text style={styles.dateTime}>{data.date}</Text><Text style={styles.dateTime}> | </Text>
             <Text style={styles.dateTime}>{data.time}</Text><Text style={styles.dateTime}> | </Text>
             <TouchableHighlight onPress={() => {
-                var info = "Chanel: " + data.chanel + "\n League: " + data.league +  "\n Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc loco tenere se Triarius non potuit. Et ille ridens: Video, inquit, quid agas."
+                var info = "Chanel: " + data.chanel + "\n League: " + data.league +  "\n Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hoc loco tenere se Triarius non potuit."
                 Alert.alert("Match Details", info);
               }}>
               <Image source={require('./Assets/Info2.png')}></Image>
